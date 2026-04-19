@@ -1,65 +1,72 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import { useEffect, useState } from "react";
+import Header from "@/components/layout/Header";
+import SearchBar from "@/components/home/SearchBar";
+import CategoryGrid from "@/components/home/CategoryGrid";
+import PromoBanner from "@/components/home/PromoBanner";
+import AdGrid from "@/components/ads/AdGrid";
+import { Ad } from "@/types/ad";
+import { getAds } from "@/services/ads.service";
+
+export default function HomePage() {
+  const [ads, setAds] = useState<Ad[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    const loadAds = async () => {
+      try {
+        const data = await getAds();
+        setAds(data);
+      } catch (err: any) {
+        setError(
+          err?.response?.data?.message ||
+            err?.message ||
+            "Impossible de charger les annonces."
+        );
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadAds();
+  }, []);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen bg-[#f6f7fb]">
+      <Header />
+
+      <section className="mx-auto max-w-7xl px-4 py-6">
+        <SearchBar />
+        <CategoryGrid />
+        <PromoBanner />
+
+        <div className="mt-10 flex items-center justify-between">
+          <div>
+            <h2 className="text-3xl font-extrabold tracking-tight text-slate-900">
+              Annonces récentes
+            </h2>
+            <div className="mt-4 inline-flex items-center rounded-2xl bg-[#eef4ff] px-5 py-3 text-sm font-semibold text-slate-700">
+              📍 Toute la Mauritanie
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+        {loading && (
+          <div className="mt-8 rounded-[28px] bg-white p-8 text-center shadow-sm">
+            <p className="text-slate-500">Chargement des annonces...</p>
+          </div>
+        )}
+
+        {error && (
+          <div className="mt-8 rounded-[28px] bg-red-50 p-6 text-center text-red-700 shadow-sm">
+            {error}
+          </div>
+        )}
+
+        {!loading && !error && <AdGrid ads={ads} />}
+      </section>
+    </main>
   );
 }
