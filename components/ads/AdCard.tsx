@@ -44,7 +44,15 @@ export default function AdCard({ ad }: Props) {
           {formatPrice(ad.price)}
         </p>
 
-        <p className="text-sm text-slate-500">📍 {ad.city}</p>
+        <p className="text-sm text-slate-500">
+          📍 {ad.cityName || "Ville non précisée"}
+        </p>
+
+        {ad.categoryName && (
+          <p className="text-xs font-medium text-slate-400">
+            {ad.categoryName}
+          </p>
+        )}
       </div>
     </Link>
   );

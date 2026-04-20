@@ -6,8 +6,8 @@ export const api = axios.create({
 
 api.interceptors.request.use((config) => {
   if (typeof window !== "undefined") {
-  //  const token = localStorage.getItem("token");
-    const token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjExNzI3MyIsInVzZXJJZCI6Nywicm9sZSI6IlVTRVIiLCJpYXQiOjE3NzY1ODg5MTAsImV4cCI6MTc3NjY3NTMxMH0.GHPfRKq86f6x8jsUfSbxCim1AMTMfRDXg-oqpZ417aQ";
+    const token = localStorage.getItem("token");
+ //   const token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMjExNzI3MyIsInVzZXJJZCI6Nywicm9sZSI6IlVTRVIiLCJpYXQiOjE3NzY1ODg5MTAsImV4cCI6MTc3NjY3NTMxMH0.GHPfRKq86f6x8jsUfSbxCim1AMTMfRDXg-oqpZ417aQ";
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }

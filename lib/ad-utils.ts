@@ -1,14 +1,29 @@
 import { Ad } from "@/types/ad";
 
-export function getAdMainImage(ad: Ad): string {
-  if (ad.imageUrl) return ad.imageUrl;
+export function toAbsoluteImageUrl(url?: string): string {
+  if (!url) return "";
 
-  if (ad.images && ad.images.length > 0) {
-    const cover = ad.images.find((img) => img.isCover);
-    return cover?.url || ad.images[0].url;
+  if (url.startsWith("http://") || url.startsWith("https://")) {
+    return url;
   }
 
-  return "";
+  const apiBase =
+    process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8888/api";
+
+  const backendBase = apiBase.replace("/api", "");
+
+  return `${backendBase}${url}`;
+}
+
+export function getAdMainImage(ad: Ad): string {
+  if (!ad.images || ad.images.length === 0) {
+    return "";
+  }
+
+  const cover = ad.images.find((img) => img.isCover);
+  const imagePath = cover?.imageUrl || ad.images[0].imageUrl;
+
+  return toAbsoluteImageUrl(imagePath);
 }
 
 export function formatPrice(price: number | string): string {

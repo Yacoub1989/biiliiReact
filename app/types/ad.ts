@@ -1,7 +1,8 @@
 export type AdImage = {
   id?: number;
-  url: string;
+  imageUrl: string;
   isCover?: boolean;
+  sortOrder?: number;
 };
 
 export type Ad = {
@@ -9,7 +10,7 @@ export type Ad = {
   title: string;
   description?: string;
   price: number | string;
-  city: string;
+  cityName?: string;
+  categoryName?: string;
   images?: AdImage[];
-  imageUrl?: string;
 };
