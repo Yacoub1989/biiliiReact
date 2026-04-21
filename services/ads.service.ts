@@ -41,8 +41,10 @@ export async function getAds(): Promise<Ad[]> {
 }
 
 export async function getAdById(id: string | number): Promise<Ad> {
-  const response = await api.get(`/ads/${id}`);
+  const response = await api.get(`/public/ads/${id}`);
   return response.data;
 }
+
+
 
 

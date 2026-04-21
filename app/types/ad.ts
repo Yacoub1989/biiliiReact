@@ -6,11 +6,15 @@ export type AdImage = {
 };
 
 export type Ad = {
-  id: number;
-  title: string;
-  description?: string;
-  price: number | string;
-  cityName?: string;
-  categoryName?: string;
-  images?: AdImage[];
+   id: number;
+    title: string;
+    description?: string;
+    price: number | string;
+    cityName?: string;
+    categoryName?: string;
+    createdAt?: string;
+    userFullName?: string;
+    phoneContact?: string;
+    whatsappContact?: string;
+    images?: AdImage[];
 };
