@@ -6,7 +6,7 @@ export type AdImage = {
 };
 
 export type Ad = {
-   id: number;
+    id: number;
     title: string;
     description?: string;
     price: number | string;

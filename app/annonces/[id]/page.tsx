@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { getAdById } from "@/services/ads.service";
-import { Ad } from "@/types/ad";
+import { Ad } from "@/types/Ad";
 import { formatPrice, getAdMainImage, toAbsoluteImageUrl } from "@/lib/ad-utils";
 
 type Props = {
