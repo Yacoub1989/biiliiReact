@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { getAdById } from "@/services/ads.service";
-import { Ad } from "@/app/types/ad";
+import { Ad } from "@/types/ad";
 import { formatPrice, getAdMainImage, toAbsoluteImageUrl } from "@/lib/ad-utils";
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
 };
 
 export default function AdDetailPage({ params }: Props) {
-  const [ad, setAd] = useState<ad | null>(null);
+  const [ad, setAd] = useState<Ad | null>(null);
   const [adId, setAdId] = useState<string>("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
