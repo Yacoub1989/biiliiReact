@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || "http://biiliiBackend.eba-phvqmhxm.eu-north-1.elasticbeanstalk.com",
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || "http://biiliiBackend.eba-phvqmhxm.eu-north-1.elasticbeanstalk.com/api",
 });
 
 api.interceptors.request.use((config) => {

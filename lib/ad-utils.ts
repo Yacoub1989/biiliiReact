@@ -8,7 +8,7 @@ export function toAbsoluteImageUrl(url?: string): string {
   }
 
   const apiBase =
-    process.env.NEXT_PUBLIC_API_BASE_URL || "http://biiliiBackend.eba-phvqmhxm.eu-north-1.elasticbeanstalk.com";
+    process.env.NEXT_PUBLIC_API_BASE_URL || "http://biiliiBackend.eba-phvqmhxm.eu-north-1.elasticbeanstalk.com/api";
 
   const backendBase = apiBase.replace("/api", "");
 
