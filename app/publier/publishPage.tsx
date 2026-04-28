@@ -59,7 +59,7 @@ export default function PublishPage() {
           images: [],
           phoneContact: form.phone || "",
           whatsappContact: form.whatsapp || "",
-          voiceQueryText: "";
+          voiceQueryText: "",
       });
 
       const adId = createdAd.id;
