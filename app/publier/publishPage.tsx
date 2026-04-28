@@ -52,6 +52,14 @@ export default function PublishPage() {
         price: Number(form.price),
         cityId: 1,
         categoryId: 1,
+          brand: form.brand || "",
+          model: form.model || "",
+          conditionState: form.conditionState || "USED",
+          district: form.district || "",
+          images: [],
+          phoneContact: form.phone || "",
+          whatsappContact: form.whatsapp || "",
+          voiceQueryText: "";
       });
 
       const adId = createdAd.id;
