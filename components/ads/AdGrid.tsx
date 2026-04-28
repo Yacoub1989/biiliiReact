@@ -1,5 +1,5 @@
 import AdCard from "./AdCard";
-import { Ad } from "@/types/ad";
+import { Ad } from "@/app/types/ad";
 
 type Props = {
   ads: Ad[];

@@ -56,7 +56,6 @@ export default function PublishPage() {
           model: "",
           conditionState:  "USED",
           district: "",
-          images: [],
           phoneContact: "",
           whatsappContact: "",
           voiceQueryText: "",

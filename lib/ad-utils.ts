@@ -1,4 +1,4 @@
-import { Ad } from "@/types/ad";
+import { Ad } from "@/app/types/ad";
 
 export function toAbsoluteImageUrl(url?: string): string {
   if (!url) return "";

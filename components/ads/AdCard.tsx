@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Ad } from "@/types/ad";
+import { Ad } from "@/app/types/ad";
 import { formatPrice, getAdMainImage } from "@/lib/ad-utils";
 
 type Props = {

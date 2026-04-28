@@ -1,5 +1,5 @@
 import { api } from "@/lib/api";
-import { Ad } from "@/types/ad";
+import { Ad } from "@/app/types/ad";
 
 export type CreateAdRequest = {
   categoryId: number;
