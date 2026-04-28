@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "https://biiliiBackend.eba-phvqmhxm.eu-north-1.elasticbeanstalk.com/api",
+  baseURL: "http://biiliiBackend.eba-phvqmhxm.eu-north-1.elasticbeanstalk.com/api",
 });
 
 console.log("API URL =", process.env.NEXT_PUBLIC_API_URL);
