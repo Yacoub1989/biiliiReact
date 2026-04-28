@@ -31,7 +31,7 @@ export default function AdDetailPage({ params }: Props) {
         setError(
           err?.response?.data?.message ||
             err?.message ||
-            "Impossible de charger l'annonce ."
+            "Impossible de charger l'annonce  ."
         );
       } finally {
         setLoading(false);
