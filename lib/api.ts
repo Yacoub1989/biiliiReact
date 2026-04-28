@@ -1,9 +1,10 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "http://biiliiBackend.eba-phvqmhxm.eu-north-1.elasticbeanstalk.com/api",
+  baseURL: "https://biiliiBackend.eba-phvqmhxm.eu-north-1.elasticbeanstalk.com/api",
 });
 
+console.log("API URL =", process.env.NEXT_PUBLIC_API_URL);
 //console.log("API URL =", process.env.NEXT_PUBLIC_API_URL);
 api.interceptors.request.use((config) => {
   if (typeof window !== "undefined") {
