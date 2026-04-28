@@ -6,7 +6,7 @@ import SearchBar from "@/components/home/SearchBar";
 import CategoryGrid from "@/components/home/CategoryGrid";
 import PromoBanner from "@/components/home/PromoBanner";
 import AdGrid from "@/components/ads/AdGrid";
-import { Ad } from "@/types/ad";
+import { Ad } from "@/app/types/Ad";
 import { getAds } from "@/services/ads.service";
 
 export default function HomePage() {
