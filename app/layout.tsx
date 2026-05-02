@@ -2,7 +2,7 @@ import "./globals.css";
 import FcmInitializer from "@/components/FcmInitializer";
 
 export const metadata = {
-  title: "bi3li",
+  title: "El Gazra",
   description: "Plateforme d'annonces en Mauritanie",
 };
 

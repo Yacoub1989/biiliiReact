@@ -9,7 +9,7 @@ export default function Header() {
             ☰
           </button>
           <Link href="/" className="text-3xl font-black text-orange-500">
-            bi3li
+            El Gazra
           </Link>
         </div>
 

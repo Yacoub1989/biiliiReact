@@ -5,7 +5,7 @@ export default function SearchBar() {
         <span className="text-3xl text-slate-400">⌕</span>
         <input
           type="text"
-          placeholder="Rechercher sur bi3li"
+          placeholder="Rechercher sur El Gazra"
           className="w-full bg-transparent text-lg outline-none placeholder:text-slate-400"
         />
         <button className="text-2xl text-slate-400">📷</button>
