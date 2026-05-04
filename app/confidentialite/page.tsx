@@ -63,6 +63,21 @@ export default function ConfidentialitePage() {
         </p>
 
         <h2 className="mt-6 mb-2 text-xl font-semibold">
+          Utilisation du microphone
+        </h2>
+
+        <p className="text-gray-700">
+          Notre application peut utiliser le microphone de votre appareil uniquement
+          lorsque vous utilisez des fonctionnalités spécifiques (par exemple : recherche vocale).
+          Aucune donnée audio n’est enregistrée ni stockée sans votre consentement.
+        </p>
+
+        <p className="text-gray-700 mt-2">
+          L’accès au microphone est demandé uniquement lorsque cela est nécessaire et peut
+          être désactivé à tout moment dans les paramètres de votre appareil.
+        </p>
+
+        <h2 className="mt-6 mb-2 text-xl font-semibold">
           Contact
         </h2>
         <p className="text-gray-700">
