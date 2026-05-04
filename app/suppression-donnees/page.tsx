@@ -25,7 +25,7 @@ export default function SuppressionDonneesPage() {
         </h2>
         <p className="text-gray-700">
           Envoyez un email à :
-          <strong> contact@elgazra.com</strong>
+          <strong> contact@elamane.net</strong>
         </p>
 
         <p className="mt-4 text-gray-700">
