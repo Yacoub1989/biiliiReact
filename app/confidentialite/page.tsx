@@ -67,7 +67,7 @@ export default function ConfidentialitePage() {
         </h2>
         <p className="text-gray-700">
           Pour toute question, vous pouvez nous contacter à :
-          <strong> contact@elamane.net</strong>
+          <strong> postmaster@elamane.net</strong>
         </p>
       </div>
     </main>
