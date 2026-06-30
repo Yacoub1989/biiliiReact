@@ -3,170 +3,187 @@ export default function ConfidentialitePage() {
     <main className="min-h-screen bg-gray-50 px-6 py-12">
       <div className="mx-auto max-w-3xl rounded-2xl bg-white p-8 shadow-sm">
         <h1 className="mb-6 text-3xl font-bold text-gray-900">
-          Privacy Policy
+          Politique de confidentialité
         </h1>
 
         <p className="mb-4 text-gray-700">
-          <strong>Effective Date:</strong> June 30, 2026
+          <strong>Date d’entrée en vigueur :</strong> 30 juin 2026
         </p>
 
         <p className="text-gray-700">
-          El Amane Driver is a free professional application designed for taxi
-          drivers to receive and manage ride requests. This Privacy Policy
-          explains how we collect, use, disclose and protect your personal
-          information when you use our application.
+          <strong>El Amane Driver</strong> est une application professionnelle
+          gratuite destinée aux chauffeurs de taxi. Cette politique de
+          confidentialité explique comment nous collectons, utilisons,
+          protégeons et partageons vos informations personnelles lorsque vous
+          utilisez notre application.
         </p>
 
         <h2 className="mt-6 mb-2 text-xl font-semibold">
-          Information We Collect
+          Informations collectées
         </h2>
 
         <p className="text-gray-700">
-          We may collect the following information:
+          Nous pouvons collecter les informations suivantes :
         </p>
 
         <ul className="mt-2 list-disc pl-6 text-gray-700 space-y-1">
-          <li>Your name</li>
-          <li>Your phone number</li>
-          <li>Your driver account information</li>
-          <li>Ride and trip management information</li>
+          <li>Votre nom.</li>
+          <li>Votre numéro de téléphone.</li>
+          <li>Les informations relatives à votre compte chauffeur.</li>
+          <li>Les informations concernant les courses effectuées.</li>
         </ul>
 
         <h2 className="mt-6 mb-2 text-xl font-semibold">
-          Location Information
+          Données de localisation
         </h2>
 
         <p className="text-gray-700">
-          El Amane Driver requires access to your device's location, including
-          background location, in order to:
+          L'application utilise la localisation de votre appareil, y compris en
+          arrière-plan, afin de :
         </p>
 
         <ul className="mt-2 list-disc pl-6 text-gray-700 space-y-1">
-          <li>Determine your current position.</li>
-          <li>Assign nearby ride requests.</li>
-          <li>Allow passengers to track the driver's location.</li>
-          <li>Improve dispatch accuracy.</li>
+          <li>Déterminer votre position actuelle.</li>
+          <li>Vous attribuer les courses situées à proximité.</li>
+          <li>Permettre aux passagers de suivre la position du chauffeur.</li>
+          <li>Améliorer la précision du système d'affectation des courses.</li>
         </ul>
 
         <p className="mt-2 text-gray-700">
-          We only keep the latest location necessary to provide the service.
-          Background location permission is required for the application to work
-          correctly.
+          Nous conservons uniquement votre dernière position nécessaire au bon
+          fonctionnement du service. L'autorisation d'accéder à votre
+          localisation, y compris en arrière-plan, est indispensable pour
+          utiliser l'application.
         </p>
 
         <h2 className="mt-6 mb-2 text-xl font-semibold">
-          Device Information
+          Informations techniques
         </h2>
 
         <p className="text-gray-700">
-          We may automatically collect technical information including:
-        </p>
-
-        <ul className="mt-2 list-disc pl-6 text-gray-700 space-y-1">
-          <li>Device model</li>
-          <li>Operating system version</li>
-          <li>IP address</li>
-          <li>Unique device identifiers</li>
-          <li>Application usage information</li>
-          <li>Crash reports and diagnostics</li>
-        </ul>
-
-        <h2 className="mt-6 mb-2 text-xl font-semibold">
-          How We Use Your Information
-        </h2>
-
-        <p className="text-gray-700">
-          Your information is used to:
+          Nous pouvons également collecter automatiquement certaines
+          informations techniques telles que :
         </p>
 
         <ul className="mt-2 list-disc pl-6 text-gray-700 space-y-1">
-          <li>Provide and maintain our services.</li>
-          <li>Connect drivers with passengers.</li>
-          <li>Improve application performance.</li>
-          <li>Send service notifications.</li>
-          <li>Ensure platform security.</li>
-          <li>Prevent fraud and abuse.</li>
+          <li>Le modèle de votre appareil.</li>
+          <li>La version du système d'exploitation.</li>
+          <li>L'adresse IP.</li>
+          <li>L'identifiant de l'appareil.</li>
+          <li>Les informations d'utilisation de l'application.</li>
+          <li>Les rapports d'erreur et données de diagnostic.</li>
         </ul>
 
         <h2 className="mt-6 mb-2 text-xl font-semibold">
-          Third-Party Services
+          Utilisation des données
         </h2>
 
         <p className="text-gray-700">
-          We may use trusted third-party services such as cloud hosting, push
-          notifications, analytics and mapping services. These providers only
-          process the information necessary to perform their services and are
-          required to protect your data.
+          Les informations collectées sont utilisées afin de :
+        </p>
+
+        <ul className="mt-2 list-disc pl-6 text-gray-700 space-y-1">
+          <li>Fournir et maintenir nos services.</li>
+          <li>Mettre en relation les chauffeurs et les passagers.</li>
+          <li>Améliorer les performances de l'application.</li>
+          <li>Envoyer des notifications liées au service.</li>
+          <li>Garantir la sécurité de la plateforme.</li>
+          <li>Prévenir les fraudes et les utilisations abusives.</li>
+        </ul>
+
+        <h2 className="mt-6 mb-2 text-xl font-semibold">
+          Partage des données
+        </h2>
+
+        <p className="text-gray-700">
+          Nous ne vendons jamais vos données personnelles.
+        </p>
+
+        <p className="mt-2 text-gray-700">
+          Certaines informations peuvent être traitées par des prestataires de
+          confiance (hébergement, notifications, cartographie, statistiques)
+          uniquement dans le but d'assurer le bon fonctionnement du service.
+          Ces prestataires sont tenus de protéger vos informations et ne peuvent
+          pas les utiliser à d'autres fins.
         </p>
 
         <h2 className="mt-6 mb-2 text-xl font-semibold">
-          Data Retention
+          Conservation des données
         </h2>
 
         <p className="text-gray-700">
-          We retain your personal information only for as long as necessary to
-          provide our services and comply with legal obligations.
+          Vos données personnelles sont conservées uniquement pendant la durée
+          nécessaire à la fourniture du service ou afin de respecter nos
+          obligations légales.
         </p>
 
         <h2 className="mt-6 mb-2 text-xl font-semibold">
-          Your Rights
+          Vos droits
         </h2>
 
         <p className="text-gray-700">
-          You have the right to access, update or request the deletion of your
-          personal information at any time.
+          Vous pouvez à tout moment :
         </p>
 
+        <ul className="mt-2 list-disc pl-6 text-gray-700 space-y-1">
+          <li>Consulter vos données personnelles.</li>
+          <li>Demander leur correction.</li>
+          <li>Demander leur suppression.</li>
+          <li>Retirer certaines autorisations accordées à l'application.</li>
+        </ul>
+
         <h2 className="mt-6 mb-2 text-xl font-semibold">
-          Delete Your Account
+          Suppression du compte
         </h2>
 
         <p className="text-gray-700">
-          You may request the deletion of your account and personal data by
-          visiting:
+          Vous pouvez demander la suppression de votre compte ainsi que de vos
+          données personnelles via la page suivante :
           <a
             href="/suppression-donnees"
             className="ml-1 font-medium text-blue-600 underline"
           >
-            Account & Data Deletion
+            Demande de suppression des données
           </a>
         </p>
 
         <h2 className="mt-6 mb-2 text-xl font-semibold">
-          Children's Privacy
+          Protection des enfants
         </h2>
 
         <p className="text-gray-700">
-          Our services are not intended for children under the age of 13. We do
-          not knowingly collect personal information from children.
+          Nos services ne sont pas destinés aux enfants de moins de 13 ans.
+          Nous ne collectons pas volontairement de données personnelles auprès
+          d'enfants.
         </p>
 
         <h2 className="mt-6 mb-2 text-xl font-semibold">
-          Security
+          Sécurité
         </h2>
 
         <p className="text-gray-700">
-          We implement reasonable technical and organizational measures to
-          protect your information against unauthorized access, disclosure,
-          alteration or destruction.
+          Nous mettons en œuvre des mesures techniques et organisationnelles
+          raisonnables afin de protéger vos informations contre tout accès non
+          autorisé, toute perte, modification ou divulgation.
         </p>
 
         <h2 className="mt-6 mb-2 text-xl font-semibold">
-          Changes to This Privacy Policy
+          Modification de la politique de confidentialité
         </h2>
 
         <p className="text-gray-700">
-          We may update this Privacy Policy from time to time. Any changes will
-          be published on this page with a new effective date.
+          Cette politique de confidentialité peut être modifiée à tout moment.
+          Toute modification sera publiée sur cette page avec la nouvelle date
+          d'entrée en vigueur.
         </p>
 
         <h2 className="mt-6 mb-2 text-xl font-semibold">
-          Contact Us
+          Nous contacter
         </h2>
 
         <p className="text-gray-700">
-          If you have any questions regarding this Privacy Policy, please
-          contact us at:
+          Pour toute question concernant cette politique de confidentialité ou
+          vos données personnelles, vous pouvez nous contacter à :
           <strong> postmaster@elamane.net</strong>
         </p>
       </div>
